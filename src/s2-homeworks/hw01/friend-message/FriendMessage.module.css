@@ -1,0 +1,59 @@
+.friendMessage {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin: 20px 0;
+}
+
+.friendImageAndText {
+    display: flex;
+}
+
+.friendImageAndText img {
+    width: 48px;
+    height: 48px;
+    top: 311px;
+    left: 70px;
+
+}
+
+.friendText {
+    margin: 0px 10px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    top: 299px;
+    left: 118px;
+    background: #F5F7FB;
+
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+color: black;
+}
+
+.friendMessageText {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: black;
+}
+
+.friendTime {
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: left;
+    color: black;
+    position: absolute;
+    top: 50px;
+    left: 13px;
+}
