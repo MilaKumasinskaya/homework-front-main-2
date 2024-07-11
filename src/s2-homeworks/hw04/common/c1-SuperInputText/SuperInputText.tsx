@@ -61,7 +61,7 @@ if(onChangeText){
     const finalSpanClassName = s.error
         + (spanClassName ? ' ' + spanClassName : '')
     const finalInputClassName = s.input
-        + (error ? ' ' + s.errorInput : ' ' + s.superInput)
+        + (s.errorInput)
         + (className ? ' ' + className : '') // задача на смешивание классов
 
     return (
