@@ -36,16 +36,26 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e) // если есть пропс onChange, то передать ему е (поскольку onChange не обязателен)
+        if(onChange ){
+            onChange(e)
+        } // если есть пропс onChange, то передать ему е (поскольку onChange не обязателен)
+if(onChangeText){
+        onChangeText(e.currentTarget.value)
 
-        onChangeText?.(e.currentTarget.value)
+
+}
+
     }
     const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
-        onKeyPress?.(e)
+        if(onKeyPress){
+            onKeyPress(e)}
+        if(e.key === 'Enter' && e.currentTarget.value !== '' && onEnter)
+        {onEnter()}
 
-        onEnter && // если есть пропс onEnter
-        e.key === 'Enter' && // и если нажата кнопка Enter
-        onEnter() // то вызвать его
+
+        // onEnter && // если есть пропс onEnter
+        // e.key === 'Enter' && // и если нажата кнопка Enter
+        // onEnter() // то вызвать его
     }
 
     const finalSpanClassName = s.error
@@ -64,12 +74,14 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
                 className={finalInputClassName}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
+
             <span
                 id={id ? id + '-span' : undefined}
                 className={finalSpanClassName}
             >
-                {error}
+{error}
             </span>
+
         </div>
     )
 }
