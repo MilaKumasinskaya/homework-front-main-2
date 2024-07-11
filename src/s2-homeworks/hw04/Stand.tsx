@@ -19,6 +19,14 @@ const Stand = () => {
                         id={'hw4-super-input-like-old'}
                         value={stateForAllInputs}
                         onChange={(e) => setValue(e.currentTarget.value)}
+                        onEnter={() => {
+                            setError(
+                                stateForAllInputs.trim()
+                                    ? ''
+                                    : 'Error'
+                            )
+                            setValue('')
+                        }}
                     />
                 </div>
                 {/*инпут с ошибкой:*/}
@@ -90,6 +98,7 @@ const Stand = () => {
                     <SuperCheckbox
                         id={'hw4-super-checkbox-like-old'}
                         checked={stateForAllCheckboxes}
+                        onChangeChecked={setChecked}
                         onChange={(e) => setChecked(e.currentTarget.checked)}
                     />
                 </div>
