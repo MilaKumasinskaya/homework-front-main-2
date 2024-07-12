@@ -65,12 +65,8 @@ if(onChangeText){
 
 
 
-    const finalInputClassName =`
-    ${s.input}
-    ${s.superInput}
-    ${s.errorInput}
-    ${className ? ' ' + className : ''}
-    `
+    const finalInputClassName = s.input + error ? ' ' + s.errorInput : ' ' + s.superInput + className ? ' ' + s.className :'';
+
 // ${error ? ' ' + s.errorInput : ' ' + s.superInput}
 
          // задача на смешивание классов
