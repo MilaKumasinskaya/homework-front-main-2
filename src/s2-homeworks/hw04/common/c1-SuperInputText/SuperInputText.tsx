@@ -49,7 +49,7 @@ if(onChangeText){
     const onKeyPressCallback = (e: KeyboardEvent<HTMLInputElement>) => {
         if(onKeyPress){
             onKeyPress(e)}
-        if(e.key === 'Enter' && e.currentTarget.value !== '' && onEnter)
+        if(e.key === 'Enter' && onEnter)
         {onEnter()}
 
 
