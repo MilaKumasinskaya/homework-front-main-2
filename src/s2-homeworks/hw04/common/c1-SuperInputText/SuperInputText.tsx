@@ -58,11 +58,22 @@ if(onChangeText){
         // onEnter() // то вызвать его
     }
 
-    const finalSpanClassName = s.error
-        + (spanClassName ? ' ' + spanClassName : '')
-    const finalInputClassName = s.input
-        + (error ? ' ' + s.errorInput : ' ' + s.superInput)
-        + (className ? ' ' + className : '') // задача на смешивание классов
+    const finalSpanClassName =`
+    ${s.error}
+    ${spanClassName ? ' ' + spanClassName : ''}
+    `
+
+
+
+    const finalInputClassName =`
+    ${s.input}
+    ${s.superInput}
+    ${s.errorInput}
+    ${className ? ' ' + className : ''}
+    `
+// ${error ? ' ' + s.errorInput : ' ' + s.superInput}
+
+         // задача на смешивание классов
 
     return (
         <div className={s.inputWrapper}>
