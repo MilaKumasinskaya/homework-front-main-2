@@ -65,7 +65,7 @@ if(onChangeText){
 
 
 
-    const finalInputClassName = s.input + error ? ' ' + s.errorInput : ' ' + s.superInput + className ? ' ' + s.className :'';
+    const finalInputClassName = s.input + (error ? ' ' + s.errorInput : ' ' + s.superInput) +( className ? ' ' + s.className :'');
 
 // ${error ? ' ' + s.errorInput : ' ' + s.superInput}
 
