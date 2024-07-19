@@ -1,9 +1,9 @@
 .sidebar {
-    visibility: hidden;
+    display: none;
     border: 1px solid green;
     width: 20%;
     height: 100vh;
-    display: flex;
+
     justify-content: left;
 
     position: fixed;
@@ -15,7 +15,7 @@
 }
 
 .sidebar.open {
-    visibility: visible;
+    display: flex;
 }
 
 .background {
