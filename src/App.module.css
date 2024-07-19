@@ -3,6 +3,7 @@
 }
 
 .hw {
+
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -16,5 +17,15 @@
 }
 
 .hwTitle {
+
+
+    margin-top: 100px;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.82px;
+    text-align: left;
+    margin-left: 40px;
+    color: black;
 
 }
