@@ -1,21 +1,19 @@
 .sidebar {
-    display: none;
     border: 1px solid green;
     width: 20%;
     height: 100vh;
-
+    display: flex;
     justify-content: left;
-
     position: fixed;
     top: 0;
-    left: 0;
+    left: -20%;
     z-index: 1000;
     background-color: #FFFFFF;
 
 }
 
 .sidebar.open {
-    display: flex;
+    left: 0;
 }
 
 .background {
