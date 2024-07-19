@@ -20,7 +20,7 @@
 
 }
 
-.nav {
+.navLink {
     font-family: Montserrat;
     font-size: 22px;
     font-weight: 600;
@@ -30,7 +30,7 @@ margin-top: 60px;
 
 }
 
-.nav a {
+.navLink a {
     color: #000000;
     text-decoration: none;
     display: flex;
@@ -39,12 +39,12 @@ margin-top: 60px;
     margin-bottom: 10px;
 }
 
-.nav a:hover {
+.navLink a:hover {
     color: #58ACFF;
 
 }
 
-.nav a.active {
+.navLink a.active {
     color: #7fb8f1;
     text-decoration: underline;
 }
