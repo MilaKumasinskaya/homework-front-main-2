@@ -2,10 +2,19 @@
 }
 
 .span {
+    padding-left: 7px;
 }
 
 .input {
+    outline: none;
+    border-radius: 5px;
+    padding-left: 7px;
 }
-
+input {
+    outline: none;
+    border: 1px solid #a09898;
+    padding-left: 7px;
+}
 .pen {
+    margin-bottom: -5px;
 }
