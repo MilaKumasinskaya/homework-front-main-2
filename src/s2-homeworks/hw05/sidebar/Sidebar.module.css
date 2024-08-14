@@ -1,5 +1,5 @@
 .sidebar {
-    border: 1px solid green;
+
     width: 20%;
     height: 100vh;
     display: flex;
@@ -20,31 +20,35 @@
 
 }
 
-.navLink {
+.nav {
+    display: flex;
+    flex-direction: column;
+
     font-family: Montserrat;
     font-size: 22px;
     font-weight: 600;
     line-height: 27px;
-margin-top: 60px;
-    margin-left: 20px;
 
 }
 
-.navLink a {
+.nav a {
+    padding: 10px;
     color: #000000;
     text-decoration: none;
-    display: flex;
     text-align: left;
-    flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 7px 10px;
 }
 
-.navLink a:hover {
+.nav a:first-child {
+    margin-top: 20px;
+}
+
+.nav a:hover {
     color: #58ACFF;
 
 }
 
-.navLink a.active {
+.nav a.active {
     color: #7fb8f1;
     text-decoration: underline;
 }
