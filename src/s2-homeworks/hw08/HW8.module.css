@@ -5,15 +5,28 @@
 }
 
 .users {
+    width: 50%;
 }
 
 .buttonsContainer {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin: 5px;
 }
 
 .container {
 }
 
 .thead {
+    color: black;
+    font-weight: bolder;
+    background: #E5E5E5;
+
+}
+
+.thead tr {
 }
 
 .nameCol {
