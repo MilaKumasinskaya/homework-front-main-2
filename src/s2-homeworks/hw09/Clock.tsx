@@ -38,8 +38,20 @@ function Clock() {
         // сохранить дату в локалСторэдж при изменении
         saveState('hw9-date', date.getTime())
     }, [date])
-    const stringTime = date.toLocaleTimeString() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = date.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringTime = new Intl.DateTimeFormat('ru-RU', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    }).format(date);
+
+    const stringDate = new Intl.DateTimeFormat('ru-RU', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    }).format(date);
+    // const stringTime = date.toLocaleTimeString() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    // const stringDate = date.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const stringDay = date.toLocaleString('en', {weekday: 'long'}) || <br/> // пишут студенты
@@ -53,7 +65,7 @@ function Clock() {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <span id={'hw9-day'}>{stringDay},</span>{' '}
+                <span id={'hw9-day'}>{stringDay}</span>,{' '}
                 <span id={'hw9-time'}>
                     <strong>{stringTime}</strong>
                 </span>
