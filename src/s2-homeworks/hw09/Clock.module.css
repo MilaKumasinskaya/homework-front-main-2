@@ -1,14 +1,27 @@
 .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
+.buttonsContainer > button{
+    text-align: center;
+    margin: 0 5px;
+    width: 100px;
 
+}
 .clock {
+    width: 360px !important;
 }
 
 .watch {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .watch strong {
 }
 
 .more {
+    margin: 20px;
 }
