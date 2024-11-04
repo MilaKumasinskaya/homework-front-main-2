@@ -4,6 +4,7 @@ import s from './HW14.module.css'
 import axios from 'axios'
 import SuperDebouncedInput from './common/c8-SuperDebouncedInput/SuperDebouncedInput'
 import {useSearchParams} from 'react-router-dom'
+import {log} from "util";
 
 /*
 * 1 - дописать функцию onChangeTextCallback в SuperDebouncedInput
@@ -34,21 +35,20 @@ const HW14 = () => {
         setLoading(true)
         getTechs(value)
             .then((res) => {
-                // делает студент
-
-                // сохранить пришедшие данные
-
-                //
+                setLoading(false)
+                console.log(res?.data.techs)
+                if (res?.data.techs) {
+                    setTechs(res?.data.techs)
+                }
             })
     }
 
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
+        setSearchParams(value)
         //
     }
 
